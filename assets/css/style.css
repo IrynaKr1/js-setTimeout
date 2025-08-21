@@ -1,0 +1,42 @@
+:root {
+  --font: 'Courier New', Courier, monospace;
+}
+
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  padding: 15px;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.timer {
+  font-family: var(--font);
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+button {
+  font-family: var(--font);
+  border-radius: 5px;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+}
+
+a {
+  text-decoration: none;
+  color: blueviolet;
+}
+
+.pageLink,
+.waitInfo {
+  font-family: var(--font);
+  font-size: 4rem;
+}
