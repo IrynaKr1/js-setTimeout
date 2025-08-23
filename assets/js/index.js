@@ -37,9 +37,8 @@ function startCountdown(totalSeconds) {
   waitInfo.textContent = `Wait ${formatTime(remaining)}`;
   waitInfo.style.display = 'block';
 
-  const countdownInterval = setInterval(() => {
+  function countdownCb() {
     remaining--;
-
     if (remaining > 0) {
       waitInfo.textContent = `Wait ${formatTime(remaining)}`;
     } else {
@@ -47,7 +46,9 @@ function startCountdown(totalSeconds) {
       waitInfo.style.display = 'none';
       pageLink.style.display = 'inline-block';
     }
-  }, 1000);
+  }
+
+  const countdownInterval = setInterval(countdownCb, 1000);
 }
 
 printNumbers(1, 15, 1000);
